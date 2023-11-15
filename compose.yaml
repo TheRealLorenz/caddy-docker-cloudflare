@@ -1,0 +1,21 @@
+version: '3'
+services:
+  caddy:
+    image: thereallorenz/caddy-docker-cloudflare:2.7
+    container_name: caddy
+    ports:
+      - 443:443
+      - 80:80
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/data
+    environment:
+      - CF_API_TOKEN=<PASTE HERE>
+      - CADDY_INGRESS_NETWORKS=caddy
+    networks:
+      - caddy
+    restart: unless-stopped
+
+networks:
+  caddy:
+    external: true
