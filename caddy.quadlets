@@ -15,7 +15,7 @@ WantedBy=default.target
 Image=ghcr.io/thereallorenz/caddy-cloudflare-ddns:0.4.0
 Pod=caddy-pod.pod
 Volume=caddy-data.volume:/data
-Volume=%h/containers/caddy/conf:/etc/caddy
+Volume=%h/containers/caddy-cloudflare-ddns/conf:/etc/caddy
 Secret=cf_api_token
 
 [Service]
