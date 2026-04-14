@@ -2,7 +2,7 @@
 PodName=caddy
 PublishPort=26080:80
 PublishPort=26443:443
-Network=caddy-net.network
+Network=caddy.network
 
 [Install]
 WantedBy=default.target
