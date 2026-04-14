@@ -1,10 +1,6 @@
 {
-	secrets {
-		file cf_api_token /run/secrets/cf_api_token
-	}
-
 	dynamic_dns {
-		provider cloudflare {secret.cf_api_token}
+		provider cloudflare {file./run/secrets/cf_api_token}
 		domains {
 			example.com
 		}

@@ -12,7 +12,7 @@ WantedBy=default.target
 
 # FileName=caddy
 [Container]
-Image=ghcr.io/thereallorenz/caddy-cloudflare-ddns:0.4.0
+Image=ghcr.io/thereallorenz/caddy-cloudflare-ddns:0.3.1
 Pod=caddy-pod.pod
 Volume=caddy-data.volume:/data
 Volume=%h/containers/caddy-cloudflare-ddns/conf:/etc/caddy
