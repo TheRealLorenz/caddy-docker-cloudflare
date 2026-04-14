@@ -2,5 +2,5 @@
 
 Reload:
 ```bash
-docker compose exec -w /etc/caddy caddy caddy reload
+podman exec -w /etc/caddy caddy caddy reload
 ```

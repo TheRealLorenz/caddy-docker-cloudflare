@@ -4,7 +4,8 @@ FROM caddy:${CADDY_VERSION}-builder AS builder
 
 RUN xcaddy build \
     --with github.com/caddy-dns/cloudflare \
-    --with github.com/mholt/caddy-dynamicdns
+    --with github.com/mholt/caddy-dynamicdns \
+    --with github.com/benfreke/caddy-file-secrets
 
 FROM caddy:${CADDY_VERSION}
 
