@@ -1,6 +1,6 @@
 {
 	dynamic_dns {
-		provider cloudflare {file./run/secrets/cf_api_token}
+		provider cloudflare {env.CF_API_TOKEN}
 		domains {
 			example.com
 		}

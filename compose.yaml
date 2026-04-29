@@ -1,0 +1,21 @@
+services:
+  caddy:
+    image: ghcr.io/thereallorenz/caddy-cloudflare-ddns:0.4.0
+    container_name: caddy
+    volumes:
+      - ./conf:/etc/caddy:ro
+      - caddy_data:/data
+    env_file: .env
+    restart: unless-stopped
+    networks:
+      - caddy
+    ports:
+      - 80:80
+      - 443:443
+
+volumes:
+  caddy_data:
+
+networks:
+  caddy:
+    external: true

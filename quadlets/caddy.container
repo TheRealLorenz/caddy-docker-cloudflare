@@ -1,9 +1,0 @@
-[Container]
-Image=ghcr.io/thereallorenz/caddy-cloudflare-ddns:0.3.1
-Pod=caddy.pod
-Volume=caddy.volume:/data
-Volume=%h/containers/caddy-cloudflare-ddns/conf:/etc/caddy
-Secret=cf_api_token
-
-[Service]
-Restart=always
